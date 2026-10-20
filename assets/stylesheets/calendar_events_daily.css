@@ -1,1 +1,12 @@
-.cal .between a.issue, p.cal.legend .between {background: url(../images/cal_between.png) no-repeat -1px -2px; padding-left:16px;}
+.cal .between > a.issue::before, p.cal.legend .between::before {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  vertical-align: middle;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M3 12l18 0'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M3 12l18 0'/%3E%3C/svg%3E") center / contain no-repeat;
+  padding-left: 22px;
+}
